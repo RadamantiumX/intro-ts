@@ -1,0 +1,16 @@
+{
+  "name": "ts-course",
+  "version": "1.0.0",
+  "description": "Tenemos dos tipos de usos en JS: El uso dinámico y el estático",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc && node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
