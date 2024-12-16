@@ -94,3 +94,57 @@ let direction: "north" | "south" | "east" | "west";
 En esta variable guardaremos un punto cardinal, y ya sabemos cuales son, asi que los especificamos como TYPES en vez de ponerle simplemente *string*. No se le podrá asignar otro valor a esa variable que no sea uno de esos.
 
 
+
+## Namespaces Modules
+
+No es muy probable que nuestro proyecto crezca en un mismo archivo, vamos a necesitar varios de ellos, si lo que queremos es un facil mantenimiento del mismo, además de un desarrollo mas ágil.
+
+*Export function*
+
+```ts
+export function test(){
+  // do something
+}
+```
+
+O
+
+```ts
+export {test} // al final de la declaracion del archivo
+```
+
+En primer lugar, tenemos una función, a la cual queremos exportar para utilizarla en otro archivo. La misma se importa de la siguiente manera.
+
+```ts
+import { test } from './test'
+```
+
+Por otro lado, esta el **default export**, en donde podemos elegir el nombre que nos parezca a la hora de importar.
+
+```ts
+export default function testMain(){
+  // do something
+}
+```
+
+O
+
+```ts
+export default testMain // al final de la declaracion del archivo
+```
+
+La importamos
+
+O
+
+```ts
+import isTesting from './test'
+```
+
+Tambien podemos importar el export regular junto con el *default*.
+
+O
+
+```ts
+import isTesting {test} from './test'
+```
